@@ -1,0 +1,49 @@
+#!/bin/sh -e
+
+PROGDIR=$(readlink -f "$(dirname "$0")")
+PATH=$PROGDIR/node_modules/.bin:$PATH
+cd "$PROGDIR/.."
+
+batches_or_error() {
+    grep -RL '## Bottles' batches | while read path; do
+        title=$(head -1 "$path" | sed 's/..//')
+        echo "$title: $path"
+    done | grep . || {
+        echo 'Nothing to bottle!' >&2
+        exit 1
+    }
+}
+
+bottles_list() {
+    echo '1 L'
+    echo '750 ml'
+    echo '500 ml'
+}
+
+bottles() {
+    bottles_list | prompts countableMultiselect --message 'Bottles' --min 1 --instructions false
+}
+
+batches=$(batches_or_error)
+path=$(echo "$batches" | prompts select --message Batch)
+date_time=$(prompts date --message 'Bottling date')
+counter=$(find bottles -type l | wc -l)
+
+sed -i.bottle "s/Bottling:\*\* .*/Bottling:** $date_time/" "$path"
+rm "$path.bottle"
+
+bottles=$(bottles)
+
+{
+    echo
+    echo '## Bottles'
+    echo
+
+    echo "$bottles" | while read size unit count; do
+        for _ in $(seq 1 "$count"); do
+            echo "* $size $unit **[#$counter]**"
+            ln -s "../$path" "bottles/$counter.md"
+            counter=$((counter+1))
+        done
+    done
+} >> "$path"

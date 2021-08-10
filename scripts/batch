@@ -1,0 +1,34 @@
+#!/bin/sh -e
+
+PROGDIR=$(readlink -f "$(dirname "$0")")
+echo $PROGDIR
+PATH=$PROGDIR/node_modules/.bin:$PATH
+cd "$PROGDIR/.."
+
+recipes() {
+    for path in recipes/*.md; do
+        title=$(head -1 "$path" | sed 's/..//')
+        echo "$title: $path $title"
+    done
+}
+
+read path title < <(recipes | prompts select --message Recipe)
+
+label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
+label=$(prompts text --message Label --initial "$label")
+
+date_time=$(prompts date --message 'Brewing date')
+date=$(echo "$date_time" | sed 's/ .*//')
+year=$(echo "$date" | sed 's/-.*//')
+
+base=$(basename "$path")
+
+cat > "batches/${year}/${date}-${base}" << EOF
+# [$date] $title
+
+* **Label:** ${label}
+* **Brewing:** ${date_time}
+* **Fermenting:**
+* **Bottling:**
+* **Chilling:**
+EOF

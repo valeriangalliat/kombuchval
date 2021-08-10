@@ -1,0 +1,22 @@
+#!/bin/sh -e
+
+PROGDIR=$(readlink -f "$(dirname "$0")")
+PATH=$PROGDIR/node_modules/.bin:$PATH
+cd "$PROGDIR/.."
+
+batches_or_error() {
+    grep -Rl 'Fermenting:\*\*$' batches | while read path; do
+        title=$(head -1 "$path" | sed 's/..//')
+        echo "$title: $path"
+    done | grep . || {
+        echo 'Nothing to ferment!' >&2
+        exit 1
+    }
+}
+
+batches=$(batches_or_error)
+path=$(echo "$batches" | prompts select --message Batch)
+date_time=$(prompts date --message 'Fermenting date')
+
+sed -i.ferment "/Fermenting:/s/$/ $date_time/" "$path"
+rm "$path.ferment"
