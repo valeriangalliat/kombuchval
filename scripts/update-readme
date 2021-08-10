@@ -1,0 +1,27 @@
+#!/bin/sh -e
+
+PROGDIR=$(readlink -f "$(dirname "$0")")
+cd "$PROGDIR/.."
+
+sed -n '1,/^## .*Upcoming batches/p' README.md
+echo
+
+grep -RL '^## Bottles' batches | while read path; do
+    title=$(head -1 "$path" | sed 's/# [^ ]* - //')
+    label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
+    echo "* [$title **[$label]**]($path)"
+done
+
+echo
+grep '## .*Latest batches' README.md
+echo
+
+grep -Rl '## Bottles' batches | sort -r | head -5 | while read path; do
+    title=$(head -1 "$path" | sed 's/# [^ ]* - //')
+    label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
+    bottling=$(grep '\*\*Bottling:\*\* ' "$path" | sed 's/.*:\*\* //')
+    echo "* $bottling [$title **[$label]**]($path)"
+done
+
+echo
+sed -n '/^## .*Philosophy/,$p' README.md

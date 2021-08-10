@@ -1,4 +1,4 @@
-# Yerba mate (single tea)
+# 🍃 Yerba mate (single tea)
 
 **Label:** KY-ST
 

@@ -1,7 +1,6 @@
 #!/bin/sh -e
 
 PROGDIR=$(readlink -f "$(dirname "$0")")
-echo $PROGDIR
 PATH=$PROGDIR/node_modules/.bin:$PATH
 cd "$PROGDIR/.."
 
@@ -23,11 +22,11 @@ year=$(echo "$date" | sed 's/-.*//')
 
 base=$(basename "$path")
 
-cat > "batches/${year}/${date}-${base}" << EOF
-# [$date] $title
+cat > "batches/$year/$date-$base" << EOF
+# $date - $title
 
-* **Label:** ${label}
-* **Brewing:** ${date_time}
+* **Label:** $label
+* **Brewing:** $date_time
 * **Fermenting:**
 * **Bottling:**
 * **Chilling:**

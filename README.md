@@ -2,7 +2,7 @@
 
 > 📝 Open-source kombucha brewery!
 
-## Recipes
+## 📂 Recipes
 
 Check out the recipes. 😋
 
@@ -14,7 +14,18 @@ it's just implied! See why [below](#why-cold-brew).
 * [🍃 Yerba mate (single tea) **[KY-ST]**](recipes/mate-single-tea.md) (only yerba mate)
 * [🌿 Peppermint **[KP]**](recipes/mint.md) (blend of orange pekoe and peppermint)
 
-## Philosophy
+## ⏳ Upcoming batches
+
+* [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-08-09-mate-single-tea.md)
+* [🌿 Peppermint **[KP]**](batches/2021/2021-08-09-mint.md)
+* [🌱 Yerba mate **[KY]**](batches/2021/2021-08-09-mate.md)
+
+## 📅 Latest batches
+
+* 2020-07-30 [🍁 Regular **[K]**](batches/2021/2021-07-20-regular.md)
+* 2020-07-30 [🌱 Yerba mate **[KYmCb]**](batches/2021/2021-07-20-mate.md)
+
+## 💡 Philosophy
 
 I've experimented with a number of things in kombucha, not only fruits,
 but also milkshake kombucha (lactose and vanilla), or even dry hopped
@@ -33,7 +44,7 @@ with at the first sip!
 Finally, **kombucha is cheap to make, and therefore should be cheap to
 buy**. I want this kombucha to be one you can afford to drink everyday.
 
-## Why cold brew?
+## ☃  Why cold brew?
 
 Since a year I've been brewing kombucha the most common way, that is,
 boiling water, steeping the tea with the sugar, then cooling it down and
@@ -57,7 +68,7 @@ If you live on Montreal and want to taste the deliciousness of cold brew
 kombucha, hit me up and I can put aside a couple of bottles from the
 next batch for you!
 
-## History
+## 📙 History
 
 It all started in November 2020, when I brewed my first ever batch of
 kombucha [in this video](https://youtu.be/Ba7bbBnlnoE).
@@ -78,7 +89,7 @@ The two that I kept brewing over and over are orange pekoe and yerba
 mate, both cold brewed, and without any extras. They're too god for
 selfishly keeping them to myself. We'll see where this leads us.
 
-## What is this repo?
+## ❓ What is this repo?
 
 That's mostly for me to organize the brewing schedule and store the
 history of batches, number the bottles and keep track of everything.

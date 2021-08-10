@@ -5,7 +5,7 @@ PATH=$PROGDIR/node_modules/.bin:$PATH
 cd "$PROGDIR/.."
 
 batches_or_error() {
-    grep -RL '## Bottles' batches | while read path; do
+    grep -RL '^## Bottles' batches | while read path; do
         title=$(head -1 "$path" | sed 's/..//')
         echo "$title: $path"
     done | grep . || {

@@ -1,4 +1,4 @@
-# Yerba mate
+# 🌱 Yerba mate
 
 **Label:** KY
 

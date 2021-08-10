@@ -1,4 +1,4 @@
-# Peppermint
+# 🌿 Peppermint
 
 **Label:** KP
 
