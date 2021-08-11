@@ -11,14 +11,16 @@ it's just implied! See why [below](#why-cold-brew).
 
 * [🍁 Regular **[K]**](recipes/regular.md) (orange pekoe)
 * [🌱 Yerba mate **[KY]**](recipes/mate.md) (blend of orange pekoe and yerba mate)
+* [🌱 Yerba mate light **[KY-]**](recipes/mate-light.md) (half sugar)
 * [🍃 Yerba mate (single tea) **[KY-ST]**](recipes/mate-single-tea.md) (only yerba mate)
-* [🌿 Peppermint **[KP]**](recipes/mint.md) (blend of orange pekoe and peppermint)
+* [🌿 Peppermint **[KP]**](recipes/mint.md) (blend of orange pekoe nd peppermint)
 
 ## ⏳ Upcoming batches
 
 * [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-08-09-mate-single-tea.md)
 * [🌿 Peppermint **[KP]**](batches/2021/2021-08-09-mint.md)
 * [🌱 Yerba mate **[KY]**](batches/2021/2021-08-09-mate.md)
+* [🌱 Yerba mate light **[KY-]**](batches/2021/2021-08-11-mate-light.md)
 
 ## 📅 Latest batches
 
