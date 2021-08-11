@@ -25,6 +25,7 @@ base=$(basename "$path")
 cat > "batches/$year/$date-$base" << EOF
 # $date - $title
 
+* **Recipe:** [$title](../../$path)
 * **Label:** $label
 * **Brewing:** $date_time
 * **Fermenting:**
