@@ -1,8 +1,6 @@
 #!/bin/sh -e
 
-PROGDIR=$(readlink -f "$(dirname "$0")")
-PATH=$PROGDIR/node_modules/.bin:$PATH
-cd "$PROGDIR/.."
+cd "$(dirname "$0")/.."
 
 batches_or_error() {
     grep -Rl ':\*\*$' batches | grep . || {

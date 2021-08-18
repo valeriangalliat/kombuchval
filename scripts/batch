@@ -1,8 +1,7 @@
 #!/bin/sh -e
 
-PROGDIR=$(readlink -f "$(dirname "$0")")
-PATH=$PROGDIR/node_modules/.bin:$PATH
-cd "$PROGDIR/.."
+cd "$(dirname "$0")/.."
+PATH=$PWD/scripts/node_modules/.bin:$PATH
 
 recipes() {
     for path in recipes/*.md; do

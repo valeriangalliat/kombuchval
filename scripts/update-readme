@@ -1,7 +1,6 @@
 #!/bin/sh -e
 
-PROGDIR=$(readlink -f "$(dirname "$0")")
-cd "$PROGDIR/.."
+cd "$(dirname "$0")/.."
 
 sed -n '1,/^## .*Upcoming batches/p' README.md
 echo
