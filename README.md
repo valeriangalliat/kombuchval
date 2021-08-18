@@ -19,7 +19,7 @@ it's just implied! See why [below](#why-cold-brew).
 
 * [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-08-09-mate-single-tea.md)
 * [🌿 Peppermint **[KP]**](batches/2021/2021-08-09-mint.md)
-* [🌱 Yerba mate **[KY]**](batches/2021/2021-08-09-mate.md)
+* [🌱 Yerba mate **[KY]**](batches/2021/2021-08-08-mate.md)
 * [🌱 Yerba mate light **[KY-]**](batches/2021/2021-08-11-mate-light.md)
 
 ## 📅 Latest batches
