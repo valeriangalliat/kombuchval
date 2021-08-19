@@ -25,24 +25,23 @@ bottles() {
 
 batches=$(batches_or_error)
 path=$(echo "$batches" | prompts select --message Batch)
+label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
 date_time=$(prompts date --message 'Bottling date')
 counter=$(find bottles -type l | wc -l)
+counter=$((counter+0)) # Cast as number without spaces
 
 sed -i.bottle "s/Bottling:\*\* .*/Bottling:** $date_time/" "$path"
 rm "$path.bottle"
 
 bottles=$(bottles)
 
-{
-    echo
-    echo '## Bottles'
-    echo
+printf '\n## Bottles\n\n' >> "$path"
 
-    echo "$bottles" | while read size unit count; do
-        for _ in $(seq 1 "$count"); do
-            echo "* $size $unit **[#$counter]**"
-            ln -s "../$path" "bottles/$counter.md"
-            counter=$((counter+1))
-        done
+echo "$bottles" | while read size unit count; do
+    for _ in $(seq 1 "$count"); do
+        echo "$size $unit [$label] [#$counter]"
+        echo "* $size $unit **[#$counter]**" >> "$path"
+        ln -s "../$path" "bottles/$counter.md"
+        counter=$((counter+1))
     done
-} >> "$path"
+done
