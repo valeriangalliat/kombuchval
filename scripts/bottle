@@ -30,7 +30,7 @@ date_time=$(prompts date --message 'Bottling date')
 counter=$(find bottles -type l | wc -l)
 counter=$((counter+0)) # Cast as number without spaces
 
-sed -i.bottle "s/Bottling:\*\* .*/Bottling:** $date_time/" "$path"
+sed -i.bottle "s/Bottling:\*\*.*/Bottling:** $date_time/" "$path"
 rm "$path.bottle"
 
 bottles=$(bottles)
