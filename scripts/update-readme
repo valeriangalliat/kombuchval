@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.."
 sed -n '1,/^## .*Upcoming batches/p' README.md
 echo
 
-grep -RL '^## Bottles' batches | while read path; do
+grep -RL '^## Bottles' batches | sort | while read path; do
     title=$(head -1 "$path" | sed 's/# [^ ]* - //')
     label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
     echo "* [$title **[$label]**]($path)"
@@ -18,7 +18,7 @@ echo
 grep -Rl '## Bottles' batches | sort -r | head -5 | while read path; do
     title=$(head -1 "$path" | sed 's/# [^ ]* - //')
     label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
-    bottling=$(grep '\*\*Bottling:\*\* ' "$path" | sed 's/.*:\*\* //')
+    bottling=$(grep '\*\*Bottling:\*\* ' "$path" | sed 's/.*:\*\* //' | cut -d' ' -f1)
     echo "* $bottling [$title **[$label]**]($path)"
 done
 
