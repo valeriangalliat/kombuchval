@@ -66,7 +66,7 @@ async function main () {
       break
   }
 
-  console.log(`${format(days, hours)} since ${since}, ${status}`)
+  console.log(`${path}: [${meta.color}] ${format(days, hours)} since ${since}, ${status}`)
 }
 
 main()

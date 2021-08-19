@@ -2,6 +2,7 @@
 
 * **Recipe:** [🍃 Yerba mate (single tea)](../../recipes/mate-single-tea.md)
 * **Label:** KY-ST
+* **Color:** blue
 * **Brewing:** 2021-08-09
 * **Fermenting:** 2021-08-10
 * **Bottling:**

@@ -2,6 +2,7 @@
 
 * **Recipe:** [🌱 Yerba mate light](../../recipes/mate-light.md)
 * **Label:** KY-
+* **Color:** green
 * **Brewing:** 2021-08-11 18:06:16
 * **Fermenting:** 2021-08-12 08:09:38
 * **Bottling:**

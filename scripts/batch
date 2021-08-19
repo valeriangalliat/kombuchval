@@ -10,11 +10,14 @@ recipes() {
     done
 }
 
-read path title < <(recipes | prompts select --message Recipe)
+recipe=$(recipes | prompts select --message Recipe)
+path=$(echo "$recipe" | cut -d' ' -f1)
+title=$(echo "$recipe" | cut -d' ' -f2-)
 
 label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
 label=$(prompts text --message Label --initial "$label")
 
+color=$(printf 'Red\nGreen\nBlue\nYellow\nPurple' | prompts select --message 'Color')
 date_time=$(prompts date --message 'Brewing date')
 date=$(echo "$date_time" | sed 's/ .*//')
 year=$(echo "$date" | sed 's/-.*//')
@@ -26,6 +29,7 @@ cat > "batches/$year/$date-$base" << EOF
 
 * **Recipe:** [$title](../../$path)
 * **Label:** $label
+* **Color:** $color
 * **Brewing:** $date_time
 * **Fermenting:**
 * **Bottling:**
