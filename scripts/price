@@ -1,0 +1,23 @@
+#!/bin/sh -e
+
+cd "$(dirname "$0")/.."
+PATH=$PWD/scripts/node_modules/.bin:$PATH
+
+recipes() {
+    for path in recipes/*.md; do
+        title=$(head -1 "$path" | sed 's/..//')
+        echo "$title: $path"
+    done
+}
+
+bottles_list() {
+    echo '500 ml: 500'
+    echo '750 ml: 750'
+    echo '1 L: 1000'
+    echo 'Growler (64 fl oz): 1893'
+}
+
+recipe=$(recipes | prompts select --message Recipe)
+ml=$(bottles_list | prompts select --message Container)
+
+node scripts/price.js "$recipe" "$ml"
