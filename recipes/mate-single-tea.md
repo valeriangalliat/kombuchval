@@ -2,7 +2,7 @@
 
 **Label:** KY-ST
 
-## ⚖ Ingredients (1 gallon)
+## ⚖ Ingredients (3.25 L)
 
 * 200 g sugar
 * 25 g yerba mate

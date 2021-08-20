@@ -2,7 +2,7 @@
 
 **Label:** KY
 
-## ⚖ Ingredients (1 gallon)
+## ⚖ Ingredients (3.25 L)
 
 * 200 g sugar
 * 12.5 g orange pekoe

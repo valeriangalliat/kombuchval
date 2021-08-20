@@ -7,7 +7,8 @@ const pricePerKg = {
   orangePekoe: 1651,
   peppermint: 5000,
   sugar: 150,
-  yerbaMate: 3083
+  yerbaMate: 3083,
+  coffee: 2400
 }
 
 const kgUnits = {
@@ -15,7 +16,8 @@ const kgUnits = {
 }
 
 const recipeMlUnits = {
-  gallon: 3500 // After removing SCOBY
+  gallon: 3250, // After removing SCOBY
+  L: 1000
 }
 
 const pricePerContainer = {
@@ -95,7 +97,8 @@ async function main () {
   const roundedPrice = (Math.round((finalPrice / 100) * 2) / 2).toFixed(2)
   const deposit = pricePerContainer[containerMl]
 
-  console.log(`Base price: ${_(basePrice)}
+  console.log(`Batch price: ${_(batchPrice)}
+Base price: ${_(basePrice)}
 Container discount: ${discount}%
 Final price: ${_(finalPrice)}
 Rounded price: ${roundedPrice}
