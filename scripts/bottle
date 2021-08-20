@@ -17,6 +17,7 @@ bottles_list() {
     echo '1 L'
     echo '750 ml'
     echo '500 ml'
+    echo 'Growler (64 fl oz)'
 }
 
 bottles() {
@@ -37,10 +38,10 @@ bottles=$(bottles)
 
 printf '\n## Bottles\n\n' >> "$path"
 
-echo "$bottles" | while read size unit count; do
+echo "$bottles" | while read count type; do
     for _ in $(seq 1 "$count"); do
-        echo "$size $unit [$label] [#$counter]"
-        echo "* $size $unit **[#$counter]**" >> "$path"
+        echo "$type [$label] [#$counter]"
+        echo "* $type **[#$counter]**" >> "$path"
         ln -s "../$path" "bottles/$counter.md"
         counter=$((counter+1))
     done
