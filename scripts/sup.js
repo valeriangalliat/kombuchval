@@ -24,7 +24,7 @@ async function main () {
 
   for (const line of lines) {
     if (line.startsWith('* ')) {
-      const [_, key, value] = line.split('**')
+      const [, key, value] = line.split('**')
       meta[key.slice(0, -1).toLowerCase()] = value.trim() || null
     }
   }

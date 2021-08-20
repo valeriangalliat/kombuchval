@@ -1,6 +1,12 @@
 {
+  "scripts": {
+    "lint": "standard --fix"
+  },
   "dependencies": {
     "prompts": "github:terkelg/prompts#pull/328/head",
     "prompts-cli": "^0.2.0"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
   }
 }

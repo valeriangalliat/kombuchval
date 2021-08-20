@@ -11,11 +11,11 @@ const pricePerKg = {
 }
 
 const kgUnits = {
-  'g': 1000
+  g: 1000
 }
 
 const recipeMlUnits = {
-  'gallon': 3500 // After removing SCOBY
+  gallon: 3500 // After removing SCOBY
 }
 
 const pricePerContainer = {
@@ -33,7 +33,7 @@ async function main () {
 
   for (const line of lines) {
     if (line.startsWith('* ')) {
-      const [_, quantity, unit, ...rest] = line.split(' ')
+      const [, quantity, unit, ...rest] = line.split(' ')
       let name = rest[0]
 
       for (const part of rest.slice(1)) {
