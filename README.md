@@ -14,6 +14,7 @@ it's just implied! See why [below](#why-cold-brew).
 * [🌱 Yerba mate light **[KY-]**](recipes/mate-light.md) (half sugar)
 * [🍃 Yerba mate (single tea) **[KY-ST]**](recipes/mate-single-tea.md) (only yerba mate)
 * [🌿 Peppermint **[KP]**](recipes/mint.md) (blend of orange pekoe nd peppermint)
+* [☕️ Coffee **[KC]**](recipes/coffee.md) (cold brew coffee)
 
 ## ⏳ Upcoming batches
 
