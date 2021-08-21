@@ -23,7 +23,7 @@ async function processBatch (path) {
   const meta = {}
 
   for (const line of lines) {
-    if (line.startsWith('* ')) {
+    if (line.startsWith('* **')) {
       const [, key, value] = line.split('**')
       meta[key.slice(0, -1).toLowerCase()] = value.trim() || null
     }
