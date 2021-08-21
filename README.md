@@ -18,12 +18,14 @@ it's just implied! See why [below](#why-cold-brew).
 
 ## ⏳ Upcoming batches
 
-* [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-08-09-mate-single-tea.md)
-* [🌿 Peppermint **[KP]**](batches/2021/2021-08-09-mint.md)
 * [🌱 Yerba mate light **[KY-]**](batches/2021/2021-08-11-mate-light.md)
+* [☕️ Coffee **[KC]**](batches/2021/2021-08-20-coffee.md)
+* [🌱 Yerba mate **[KY]**](batches/2021/2021-08-20-mate.md)
 
 ## 📅 Latest batches
 
+* 2021-08-20 [🌿 Peppermint **[KP]**](batches/2021/2021-08-09-mint.md)
+* 2021-08-20 [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-08-09-mate-single-tea.md)
 * 2021-08-19 [🌱 Yerba mate **[KY]**](batches/2021/2021-08-08-mate.md)
 * 2020-07-30 [🍁 Regular **[K]**](batches/2021/2021-07-20-regular.md)
 * 2020-07-30 [🌱 Yerba mate **[KYmCb]**](batches/2021/2021-07-20-mate.md)
