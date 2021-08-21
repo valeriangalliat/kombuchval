@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 PATH=$PWD/scripts/node_modules/.bin:$PATH
 
 batches_or_error() {
-    grep -Rl 'Chilling:\*\*$' batches | while read path; do
+    grep -Rl 'Chilling:\*\*$' batches | xargs grep -RL 'Bottling:\*\*$' | while read path; do
         title=$(head -1 "$path" | sed 's/..//')
         echo "$title: $path"
     done | grep . || {
