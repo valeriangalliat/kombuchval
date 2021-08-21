@@ -10,6 +10,9 @@ bottle:
 chill:
 	@./scripts/chill
 
+brix:
+	@./scripts/brix
+
 sup:
 	@./scripts/sup
 
