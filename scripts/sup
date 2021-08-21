@@ -11,6 +11,4 @@ batches_or_error() {
 
 batches=$(batches_or_error)
 
-for batch in $batches; do
-    node scripts/sup.js "$batch"
-done
+node scripts/sup.js $batches

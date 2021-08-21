@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const path = process.argv[2]
+const batches = process.argv.slice(2)
 
 function diff (now, since) {
   const totalHours = (now - since) / 1000 / 60 / 60
@@ -9,15 +9,15 @@ function diff (now, since) {
   return { days, hours }
 }
 
-function format (days, hours) {
+function format ({ days, hours }) {
   if (days < 1) {
     return hours === 1 ? '1 hour' : `${hours} hours`
   }
 
-  return (days === 1 ? '1 day, ' : `${days} days, `) + format(0, hours)
+  return (days === 1 ? '1 day, ' : `${days} days, `) + format({ days: 0, hours })
 }
 
-async function main () {
+async function processBatch (path) {
   const data = await fs.readFile(path, 'utf8')
   const lines = data.split('\n')
   const meta = {}
@@ -30,43 +30,70 @@ async function main () {
   }
 
   const now = Date.now()
-  let since
-  let status = 'nothing to do!'
+  let currentState
+  let nextState
 
   if (!meta.fermenting) {
-    since = 'brewing'
+    currentState = 'brewing'
   } else if (!meta.bottling) {
-    since = 'fermenting'
+    currentState = 'fermenting'
   } else if (!meta.chilling) {
-    since = 'bottling'
+    currentState = 'bottling'
   } else {
     return
   }
 
-  const { days, hours } = diff(now, Date.parse(meta[since]))
+  const { days, hours } = diff(now, Date.parse(meta[currentState]))
 
-  switch (since) {
+  switch (currentState) {
     case 'brewing':
       if (days > 0 || hours >= 8) {
-        status = 'ready to ferment'
+        nextState = 'fermenting'
       }
 
       break
     case 'fermenting':
       if (days > 8) {
-        status = 'bottle soon?'
+        nextState = 'bottling'
       }
 
       break
     case 'bottling':
       if (days > 2) {
-        status = 'chill soon'
+        nextState = 'chilling'
       }
 
       break
   }
 
-  console.log(`${path}: [${meta.color}] ${format(days, hours)} since ${since}, ${status}`)
+  return {
+    path,
+    meta,
+    diff: { days, hours },
+    currentState,
+    nextState
+  }
+}
+
+async function main () {
+  const buckets = {
+    fermenting: [],
+    bottling: [],
+    chilling: []
+  }
+
+  const suggestion = {
+    fermenting: 'ready to ferment',
+    bottling: 'bottle soon?',
+    chilling: 'chil soon',
+    undefined: 'nothing to do!'
+  }
+
+  for (const path of batches) {
+    const status = await processBatch(path)
+
+    console.log(`${status.path}: [${status.meta.color}] ${format(status.diff)} since ${status.currentState}, ${suggestion[status.nextState]}`)
+  }
 }
 
 main()
