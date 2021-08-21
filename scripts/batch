@@ -17,7 +17,7 @@ title=$(echo "$recipe" | cut -d' ' -f2-)
 label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
 label=$(prompts text --message Label --initial "$label")
 
-color=$(printf 'Red\nGreen\nBlue\nYellow\nPurple' | prompts select --message 'Color')
+color=$(printf 'Red: red\nGreen: green\nBlue: blue\nYellow: yellow\nPurple: purple' | prompts select --message 'Color')
 date_time=$(prompts date --message 'Brewing date')
 date=$(echo "$date_time" | sed 's/ .*//')
 year=$(echo "$date" | sed 's/-.*//')
