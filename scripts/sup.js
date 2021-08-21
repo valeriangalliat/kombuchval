@@ -47,19 +47,19 @@ async function processBatch (path) {
 
   switch (currentState) {
     case 'brewing':
-      if (days > 0 || hours >= 8) {
+      if (days >= 1 || hours >= 8) {
         nextState = 'fermenting'
       }
 
       break
     case 'fermenting':
-      if (days > 8) {
+      if (days >= 8) {
         nextState = 'bottling'
       }
 
       break
     case 'bottling':
-      if (days > 2) {
+      if (days >= 2) {
         nextState = 'chilling'
       }
 
