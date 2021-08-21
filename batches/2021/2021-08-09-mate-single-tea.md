@@ -6,7 +6,7 @@
 * **Brewing:** 2021-08-09
 * **Fermenting:** 2021-08-10
 * **Bottling:** 2021-08-20 10:18:08
-* **Chilling:**
+* **Chilling:** 2021-08-21 14:46:48
 
 ## Bottles
 
