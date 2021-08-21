@@ -79,20 +79,35 @@ async function main () {
   const buckets = {
     fermenting: [],
     bottling: [],
-    chilling: []
+    chilling: [],
+    undefined: []
   }
 
-  const suggestion = {
-    fermenting: 'ready to ferment',
-    bottling: 'bottle soon?',
-    chilling: 'chil soon',
-    undefined: 'nothing to do!'
+  const title = {
+    fermenting: 'Ready to ferment',
+    bottling: 'Bottle soon?',
+    chilling: 'Chill soon',
+    undefined: 'Nothing to do!'
   }
 
   for (const path of batches) {
     const status = await processBatch(path)
+    buckets[status.nextState].push(status)
+  }
 
-    console.log(`${status.path}: [${status.meta.color}] ${format(status.diff)} since ${status.currentState}, ${suggestion[status.nextState]}`)
+  for (const [name, bucket] of Object.entries(buckets)) {
+    if (bucket.length < 1) {
+      continue
+    }
+
+    console.log(`## ${title[name]}`)
+    console.log()
+
+    for (const batch of bucket) {
+      console.log(`${batch.path}: [${batch.meta.color}] ${format(batch.diff)} since ${batch.currentState}`)
+    }
+
+    console.log()
   }
 }
 
