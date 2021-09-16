@@ -14,21 +14,19 @@ it's just implied! See why [below](#why-cold-brew).
 * [🌱 Yerba mate light **[KY-]**](recipes/mate-light.md) (half sugar)
 * [🍃 Yerba mate (single tea) **[KY-ST]**](recipes/mate-single-tea.md) (only yerba mate)
 * [🌿 Peppermint **[KP]**](recipes/mint.md) (blend of orange pekoe nd peppermint)
-* [☕️ Coffee **[KC]**](recipes/coffee.md) (cold brew coffee)
+* [☕️ Koffucha **[KC]**](recipes/koffucha.md) (cold brew coffee)
 
 ## ⏳ Upcoming batches
 
-* [🌱 Yerba mate light **[KY-]**](batches/2021/2021-08-11-mate-light.md)
-* [☕️ Coffee **[KC]**](batches/2021/2021-08-20-coffee.md)
-* [🌱 Yerba mate **[KY]**](batches/2021/2021-08-20-mate.md)
+* [🌱 Yerba mate **[KY]**](batches/2021/2021-09-04-mate.md)
 
 ## 📅 Latest batches
 
+* 2021-09-06 [🌱 Yerba mate **[KY]**](batches/2021/2021-08-20-mate.md)
+* 2021-09-06 [☕️ Koffucha **[KC]**](batches/2021/2021-08-20-koffucha.md)
+* 2021-08-23 [🌱 Yerba mate light **[KY-]**](batches/2021/2021-08-11-mate-light.md)
 * 2021-08-20 [🌿 Peppermint **[KP]**](batches/2021/2021-08-09-mint.md)
 * 2021-08-20 [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-08-09-mate-single-tea.md)
-* 2021-08-19 [🌱 Yerba mate **[KY]**](batches/2021/2021-08-08-mate.md)
-* 2020-07-30 [🍁 Regular **[K]**](batches/2021/2021-07-20-regular.md)
-* 2020-07-30 [🌱 Yerba mate **[KYmCb]**](batches/2021/2021-07-20-mate.md)
 
 ## 💡 Philosophy
 
