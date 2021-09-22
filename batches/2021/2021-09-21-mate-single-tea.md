@@ -4,6 +4,6 @@
 * **Label:** KY-ST
 * **Color:** purple
 * **Brewing:** 2021-09-21 16:28:27
-* **Fermenting:**
+* **Fermenting:** 2021-09-21 21:31:31
 * **Bottling:**
 * **Chilling:**
