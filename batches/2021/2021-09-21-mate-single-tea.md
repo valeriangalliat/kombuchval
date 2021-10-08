@@ -7,3 +7,7 @@
 * **Fermenting:** 2021-09-21 21:31:31
 * **Bottling:**
 * **Chilling:**
+
+## Brix readings
+
+* 2021-10-08 09:03:10: 4.5
