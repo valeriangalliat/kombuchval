@@ -14,6 +14,8 @@ recipe=$(recipes | prompts select --message Recipe)
 path=$(echo "$recipe" | cut -d' ' -f1)
 title=$(echo "$recipe" | cut -d' ' -f2-)
 
+sed -n '/^## .*Ingredients/,/^#/p' "$path" | grep '^*'
+
 label=$(grep '\*\*Label:\*\* ' "$path" | sed 's/.*:\*\* //')
 label=$(prompts text --message Label --initial "$label")
 
