@@ -19,17 +19,16 @@ it's just implied! See why [below](#why-cold-brew).
 
 ## ⏳ Upcoming batches
 
-* [🌱 Yerba mate light (single tea) **[KY-ST-]**](batches/2021/2021-09-21-mate-light-single-tea.md)
-* [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-09-21-mate-single-tea.md)
-* [🌱 Yerba mate **[KY]**](batches/2021/2021-09-21-mate.md)
+* [☕️ Koffucha **[KC]**](batches/2021/2021-10-12-koffucha.md)
+* [🍁 Regular **[K]**](batches/2021/2021-10-12-regular.md)
 
 ## 📅 Latest batches
 
+* 2021-10-08 [🍃 Yerba mate (single tea) **[KY-ST]**](batches/2021/2021-09-21-mate-single-tea.md)
+* 2021-10-05 [🌱 Yerba mate **[KY]**](batches/2021/2021-09-21-mate.md)
+* 2021-10-08 [🌱 Yerba mate light (single tea) **[KY-ST-]**](batches/2021/2021-09-21-mate-light-single-tea.md)
 * 2021-09-28 [☕️ Koffucha **[KC]**](batches/2021/2021-09-16-koffucha.md)
 * 2021-09-18 [🌱 Yerba mate **[KY]**](batches/2021/2021-09-04-mate.md)
-* 2021-09-06 [🌱 Yerba mate **[KY]**](batches/2021/2021-08-20-mate.md)
-* 2021-09-06 [☕️ Koffucha **[KC]**](batches/2021/2021-08-20-koffucha.md)
-* 2021-08-23 [🌱 Yerba mate light **[KY-]**](batches/2021/2021-08-11-mate-light.md)
 
 ## 💡 Philosophy
 
