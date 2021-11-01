@@ -6,7 +6,7 @@
 * **Brewing:** 2021-09-21 16:28:27
 * **Fermenting:** 2021-09-21 21:31:31
 * **Bottling:** 2021-10-08 09:29:06
-* **Chilling:**
+* **Chilling:** 2021-11-01 19:06:01
 
 ## Brix readings
 
