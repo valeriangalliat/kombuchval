@@ -26,6 +26,8 @@ year=$(echo "$date" | sed 's/-.*//')
 
 base=$(basename "$path")
 
+mkdir -p "batches/$year"
+
 cat > "batches/$year/$date-$base" << EOF
 # $date - $title
 
