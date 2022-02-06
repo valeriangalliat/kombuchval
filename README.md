@@ -19,7 +19,6 @@ it's just implied! See why [below](#why-cold-brew).
 
 ## ⏳ Upcoming batches
 
-* [☕️ Koffucha **[KC]**](batches/2021/2021-11-20-koffucha.md)
 * [🌱 Yerba mate **[KY]**](batches/2022/2022-02-06-mate.md)
 * [🍁 Regular **[K]**](batches/2022/2022-02-06-regular.md)
 
