@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.."
 batches_or_error() {
     grep -Rl ':\*\*$' batches | sort | grep . || {
         echo 'Nothing to do!' >&2
-        exit 1
+        exit
     }
 }
 
